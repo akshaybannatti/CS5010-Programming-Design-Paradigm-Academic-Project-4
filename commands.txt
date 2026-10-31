@@ -1,0 +1,35 @@
+create event "Team Meeting" from 2025-11-03T09:00 to 2025-11-03T10:00
+create event "Lunch" from 2025-11-03T12:30 to 2025-11-03T13:00
+create event "Doctor Appointment" from 2025-11-04T15:00 to 2025-11-04T15:30
+create event "Standup" on 2025-11-05 repeats MTWRF until 2025-11-20
+create event "Scrum Review" on 2025-11-06 repeats TR for 3
+
+print events on 2025-11-03
+print events from 2025-11-03T00:00 to 2025-11-07T23:59
+
+edit event subject "Team Meeting" from 2025-11-03T09:00 with "NewTitle"
+edit event status "Doctor Appointment" from 2025-11-04T15:00 with PRIVATE
+
+create event "Team Meeting" from 2025-11-03T09:00 to 2025-11-03T10:00
+edit event end "Team Meeting" from 2025-11-03T09:00 with 2025-11-03T10:15
+edit event start "Team Meeting" from 2025-11-03T09:00 with 2025-11-03T09:10
+edit event location "Team Meeting" from 2025-11-03T09:10 with "Room 201"
+edit event description "Team Meeting" from 2025-11-03T09:10 with "Kickoff agenda"
+
+
+create event "Team Meeting" from 2025-11-03T09:00 to 2025-11-03T10:00
+edit event end "Team Meeting" from 2025-11-03T09:00 with 2025-11-03T10:15
+print events on 2025-11-03
+
+create event "Standup (timed)" on 2025-11-05 repeats MTWRF until 2025-11-20
+create event "Office Hours" on 2025-11-06 repeats TR for 4
+
+edit event start "NewTitle" from 2025-11-03T09:00 with 2025-11-03T09:10
+edit event end "NewTitle" from 2025-11-03T09:10 with 2025-11-03T10:15
+edit event location "NewTitle" from 2025-11-03T09:10 with "Room 201"
+edit event description "NewTitle" from 2025-11-03T09:10 with "Kickoff agenda"
+
+show status on 2025-11-03T09:30
+
+export cal build/calendar.csv
+exit
